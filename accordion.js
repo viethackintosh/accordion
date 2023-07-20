@@ -112,16 +112,6 @@ const Accordion = function() {
     acc.createAccordionContent = ({content}) => 
         isNodeDOM(content) ? {append:content}:{innerHTML:content};  
     
-    /* { id: id of accordion,
-        arrowbutton: enable (allow to click arrow button to open or close accordion ),
-        onlyAccordionOpen: allow all accordions open or only one open
-        accordions:  [
-            {idAccordion, heading, content(object || innerHTML )},
-            {idAccordion1, heading1, content1(object || innerHTML )}, 
-        ],
-
-     */
-    
     acc.getHeightChildrenInContent = ({itemContent}) => (itemContent.children.length == 0) ? 0: 
         Array.from(itemContent.children).map(child => child.clientHeight).reduce((acc, cur)=> acc + cur,0);        
     
