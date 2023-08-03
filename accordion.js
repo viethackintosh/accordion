@@ -118,5 +118,5 @@ const Accordion = function() {
     return acc;
 }
  
- export {  Accordion, };
+ export default  Accordion;
  
